@@ -5,7 +5,7 @@ import { switchMap, filter, tap, defaultIfEmpty, of } from "rxjs";
 import { CID } from "src/app/shared/config/constants.json";
 
 export function a_equipment_add_quantity(vs: ViewService, apis: ApiService, ws: WizardService) {
-    return ws.create('test').pipe(
+    return ws.create('addQuantity').pipe(
       tap(() => {
         ws.allowSave(() => {
           if (ws.getValue('quantity') === '') {
@@ -21,18 +21,10 @@ export function a_equipment_add_quantity(vs: ViewService, apis: ApiService, ws: 
           CID.EQUIPMENT,
           wizardDestroyed.savedFields,
            {}
-      )   
-
-      ),
+      ) ),  
       tap(() => {
         vs.refresh();
-    
       }),
       defaultIfEmpty(null)
     );
 }
-    
-
-        
-    
-    

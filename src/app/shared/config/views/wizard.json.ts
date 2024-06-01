@@ -48,7 +48,6 @@ export const wizardConfig = [
                 {
                     fieldLabel: "Name",
                     fieldType: "text",
-                    fieldName: "name",
                     isClass: false,
                     classDataUrl: '',
                 },
@@ -60,7 +59,7 @@ export const wizardConfig = [
                 },
             ]
         },
-        "test": {
+        "addQuantity": {
             title: 'Create quantity type',
             fields: [
                 {
